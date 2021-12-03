@@ -1,0 +1,47 @@
+.nav {
+    /* background-image: url('./image/bg-2.jpg'); */
+    background-image: url('https://wallpaperaccess.com/full/1614778.jpg');
+
+    border-radius:20px ;
+
+
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbar {
+    /* background-color: rgba(14, 14, 14, 0.5); */
+    background-color: black;
+    border-radius: 20px;
+    position:fixed;
+    width: 98.5%;
+
+    display: grid;
+    grid-template-columns: 30% 7% 7% 11% 16% 17% 9%;
+}
+
+.navbar>div>a {
+    color: azure;
+    font-size: 23px;
+    text-decoration: none;
+    text-align: center;
+    /* margin-top: 25px; */
+    margin-bottom: 20px;
+
+    padding: 20px;
+
+}
+
+.navbar>div>a:hover {
+    color: red;
+    font-size: 24px;
+}
+
+.navbar>div {
+
+    color: white;
+    padding: 10px;
+  
+  
+}
+

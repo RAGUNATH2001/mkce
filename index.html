@@ -6,15 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MKCE-International Conference</title>
+
+    <!-- modebox -->
+    <link rel="stylesheet" href="./model_box/modelbox.css">
+  
+
+    <!-- -------- -->
+
     <link rel="shortcut icon" href="./image/college_logo.png" width="40px;">
+    <link rel="stylesheet" href="./styleindex.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="table.css">
+    <link rel="stylesheet" href="statusbar.css">
+    <script src="statusbar.js"></script>
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
     <style>
+        body {
+            /* background-color: rgb(161, 158, 158, 0.3); */
+        }
+
         .nav {
             /* background-image: url('./image/bg-2.jpg'); */
             background-image: url('https://wallpaperaccess.com/full/1614778.jpg');
 
-            border-radius:20px ;
+            border-radius: 20px;
 
 
             background-repeat: no-repeat;
@@ -22,9 +41,9 @@
         }
 
         .navbar {
-            background-color: rgba(14, 14, 14, 0.5);
+            background-color: rgba(14, 14, 14);
             border-radius: 20px;
-            position:fixed;
+            position: fixed;
             width: 99%;
 
             display: grid;
@@ -52,15 +71,20 @@
 
             color: white;
             padding: 10px;
-          
-          
+
+
         }
 
         .title {
             font-size: 40px;
             text-align: center;
-            background-color:rgb(255, 255, 255,0.4);
+            background-color: rgb(255, 255, 255, 0.4);
 
+
+        }
+
+        .title1 {
+            color: white;
         }
 
         .title3 {
@@ -79,33 +103,49 @@
             font-family: cursive;
             font-size: 30px;
             animation: blink 1s linear infinite;
-            color:red;
+            color: red;
         }
 
         @keyframes blink {
             0% {
                 opacity: 0;
-                color:red;
-                
+                color: red;
+
             }
 
             50% {
                 opacity: .5;
-                color:red;
+                color: red;
             }
 
             100% {
                 opacity: 1;
-               
-                animation-duration:6ms;
+
+                animation-duration: 6ms;
             }
-            
+
         }
-        .title5{
+
+        .title5 {
             font-size: 30px;
         }
-        .title6{
+
+        .title6 {
             font-size: 30px;
+        }
+
+        /* main content */
+        .maincontent {
+            background-color: rgb(216, 182, 187, 0.6);
+        }
+
+
+        .call_ul {
+            margin-left: 40%;
+            font-size: 20px;
+            line-height: 30px;
+            font-weight: bold;
+            color: brown;
         }
     </style>
 </head>
@@ -115,20 +155,22 @@
         <div class="nav">
             <div class="navbar">
                 <div><img src="image\logo.png" width="50%" height="50px"></div>
-                <div  style="margin-top: 10px;"> <a href="./index.html" style="color:red;">Home</a> </div>
-                <div style="margin-top: 10px;"> <a href="./about.html" target="_blank">About</a> </div>
+                <div style="margin-top: 10px;"> <a href="./index.html" style="color:red;">Home</a> </div>
+                <div style="margin-top: 10px;"> <a href="./about.html">About</a> </div>
                 <div style="margin-top: 10px;"><a href="./commitee.html">Committee</a></div>
-                <div style="margin-top: 10px;"><a href="./call_for_paper.html">Call for Papers</a></div>
-                <div style="margin-top: 10px;"><a href="">Important Dates</a></div>
+                <div style="margin-top: 10px;"><a href="#call_for_paper">Call for Papers</a></div>
+                <div id="myBtn"  style="margin-top: 10px;"><a href="" >Important Dates</a></div>
                 <div style="margin-top: 10px;"><a href="./">Register</a></div>
             </div>
+            <div class="progress-bar" id="myBar"></div>
 
             <div class="title">
                 <br>
                 <br>
-                
 
-                <span class="title1" class="font-effect-shadow-multiple"><span>AICTE Sponsored </span>  International Conference</span><br>
+
+                <span class="title1" class="font-effect-shadow-multiple"><span>AICTE Sponsored </span> International
+                    Conference</span><br>
 
                 <span class="title1">On</span><br>
 
@@ -136,24 +178,187 @@
                     Learning in Big Data Analytics and Data Science”</span>
 
                 <br>
-                
 
-                <span class="title4">( 9 , 10 th  March 2022)</span>
+
+                <span class="title4">( 9 , 10 th March 2022)</span>
                 <br>
                 <br>
-              
-                <span class="title5">Organized By<br>
+
+                <span class="title5 ">Organized By<br>
                     Department Of Computer Science and Engineering</span>
-                    <br>
-                    <span class="title6"> M.Kumrasamy College of Engineering,Thalavapalayam,Karur-639113</span>
+                <br>
+                <span class="title6"> M.Kumrasamy College of Engineering,Thalavapalayam,Karur-639113</span>
 
             </div>
 
         </div>
 
+        <div class="maincontent">
+            <div class="remember">
+                <br>
+                <h3 style="text-align: center; text-decoration:underline; text-decoration-color: green;">DATES TO
+                    REMEMBER</h3>
+                <div class="remember_data_content" style="margin-left:30px ;">
+                    <br />
+                    <img src="./assets/Remember Date/images1.png" alt="" onclick="showDate1()" />
+                    <img src="./assets/Remember Date/images2.png" alt="" onclick="showDate2()" />
+                    <img src="./assets/Remember Date/images3.png" alt="" onclick="showDate3()" />
+                    <img src="./assets/Remember Date/images4.png" alt="" onclick="showDate4()" />
+                </div>
+                <br />
+            </div>
+            <div class="registration">
+                <h3 style="text-align: center;">REGISTERATION</h3>
+                <div class="container1">
+                    <div class="registeration_data_content">
+                        <h5>REGISTERATION FEE</h5>
+                        <table border="1" id="fees">
+                            <tr>
+                                <th>Category</th>
+                                <th>Amount</th>
+                            </tr>
+                            <tr>
+                                <td>Students / Academicians/Research Scholar</td>
+                                <td>Rs.1500/-</td>
+                            </tr>
+                            <tr>
+                                <td>Delegates From Industry</td>
+                                <td>Rs.2000/-</td>
+                            </tr>
+                            <tr>
+                                <td>Overseas Delegates</td>
+                                <td>Rs.2500/-</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="con2">
+                        <h5>ACCOMODATION</h5>
+                        <p id="accomodation_para">
+                            Accommodation for the participants can be arranged on prior request
+                            by clicking <span style="color:red">“Yes”</span> in accommodation field while filling the
+                            registration form.
+                            <br>
+                            <br>
+                            <span style="color:green">⦁ Registration Link :</span> <span
+                                style="color:orangered">............</span>
+                        </p>
+                    </div>
+                </div>
+                <br />
+            </div>
+            <!-- Call for Papers -->
+            <div id="call_for_paper" class="Call_for_Papers" style="background-color:rgba(170, 209, 96, 0.3);">
+                <h3
+                    style="text-align: center; background-color: antiquewhite; font-size: 25px; text-decoration: underline;text-decoration-color:green ; text-decoration-style:double ;">
+                    Call for Papers</h3>
+                <p class="call_content" style="font-size: 20px; text-indent: 30px;">
+                    Authors are invited to contribute to the conference by submitting novel unpublished articles in the
+                    following areas but not restricted to:
+                </p>
+
+                <ul class="call_ul">
+                    <li>Data Mining Tasks </li>
+                    <li>Data Mining Applications </li>
+                    <li>Image Processing </li>
+                    <li>Artificial Intelligence </li>
+                    <li>Big Data Analytics </li>
+                    <li>Data Science </li>
+                    <li>Machine Learning.</li>
+                    <li>Neural Networks</li>
+                    <li>Deep Learning</li>
+                    <li>Computational Intelligence</li>
+                    <li>Expert Systems</li>
+
+                </ul>
+
+
+
+
+            </div>
+            <div class="manuscript">
+                <h3>MANUSCRIPT SUBMISSION</h3>
+                <div class="manuscript_content">
+
+                    <ul>
+                        <li>
+
+                            <i class="material-icons">done_outline</i>A
+                            submission of paper consist of maximum of 15 pages with 1.5 line
+                            spaced, Single Column, Times New Roman, 12 font size and one inch
+                            margin on all sides on A4 size.
+                        </li>
+                        <li>
+                            <i class="material-icons">done_outline</i>Initial
+                            Submission of abstract will be used to review the technical content
+                            of the paper.
+                        </li>
+                        <li>
+                            <i class="material-icons">done_outline</i>The
+                            accepted conference papers will be published in Springer Book
+                            Chapter.
+                        </li>
+                        <li>
+                            <i class="material-icons">done_outline</i>The
+                            conference papers should be submitted through Mail ID:
+                            <a href="mailto: EIMLBDADS22@mkce.ac.in">EIMLBDADS22@mkce.ac.in</a>
+                        </li>
+                    </ul>
+                </div>
+                <br />
+            </div>
+            <div id="important">
+                <h3
+                    style="text-align: center; background-color: antiquewhite; font-size: 25px; text-decoration: underline;text-decoration-color:green ; text-decoration-style:double ;">
+                    Important Dates</h3>
+                <div class="import_table">
+                    <table id="impt_table" border="1">
+                        <tr>
+                            <th colspan="2">Important Dates</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Abstract Submission</td>
+                            <td>19.01.2022</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Notification of Acceptance</td>
+                            <td>04.02.2022</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Full Paper Submission</td>
+                            <td>14.02.2022</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Conference Dates</td>
+                            <td>09.03.2022 & 10.03.2022</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
 
 
     </div>
+    <!-- model box -->
+    
+
+    
+<div id="myModal" class="modal">
+
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Some text in the Modal..</p>
+    </div>
+  
+  </div>
 
 </body>
 

@@ -1,0 +1,22 @@
+#impt_table{
+    border-collapse:collapse;
+    font-size: 20px;
+    text-align: center;
+    border-color:blueviolet;
+    background-color: antiquewhite;
+
+}
+th,td{
+    padding:10px;
+}
+.import_table{
+    margin-left: 15%;
+  
+}
+td:nth-child(2){
+    width: 70%;
+}
+tr:nth-child(1),th:nth-child(3){
+    border-bottom: 2px solid brown;
+}
+
