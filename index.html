@@ -6,6 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MKCE-International Conference</title>
+    <link rel="stylesheet" href="switealert.css">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  
+
 
     <!-- modebox -->
     <link rel="stylesheet" href="./model_box/modelbox.css">
@@ -147,6 +153,51 @@
             font-weight: bold;
             color: brown;
         }
+        .third1,.third2,.third3,.third4{
+            cursor: pointer;
+            
+
+        }
+        .third1:hover,.third2:hover,.third3:hover,.third4:hover{
+            border:2px solid red;
+           
+            transform: scale(1.19);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+
+        }
+        .txteshow{
+            color:red;
+            font-size: 20px;
+            position: relative;
+            left:30px;
+            top:40px;
+            right:50%;
+            
+
+
+        }
+        a[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  top: -100%;
+  left: 0;
+}
+
+.call_ul>ul {
+  list-style: none;
+  padding: 0;
+}
+.call_ul>ul>li {
+  padding-left: 1.3em;
+}
+.call_ul>ul>li:before {
+  content: "\f00c"; /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -1.3em; /* same as padding-left set on li */
+  width: 1.3em; /* same as padding-left set on li */
+}
     </style>
 </head>
 
@@ -200,11 +251,12 @@
                     REMEMBER</h3>
                 <div class="remember_data_content" style="margin-left:30px ;">
                     <br />
-                    <img src="./assets/Remember Date/images1.png" alt="" onclick="showDate1()" />
-                    <img src="./assets/Remember Date/images2.png" alt="" onclick="showDate2()" />
-                    <img src="./assets/Remember Date/images3.png" alt="" onclick="showDate3()" />
-                    <img src="./assets/Remember Date/images4.png" alt="" onclick="showDate4()" />
+                    <img src="./assets/Remember Date/images1.png" alt="" title=" click me!" class="third1"  />
+                    <img src="./assets/Remember Date/images2.png" alt="" class="third2" />
+                    <img src="./assets/Remember Date/images3.png" alt="" class="third3" />
+                    <img src="./assets/Remember Date/images4.png" alt=""  class="third4" />
                 </div>
+              
                 <br />
             </div>
             <div class="registration">
@@ -359,6 +411,24 @@
     </div>
   
   </div>
+
+
+
+       <script>
+    document.querySelector(".third1").addEventListener('click', function(){
+  Swal.fire("Abstract Submission", "19.01.2022", "success");
+});
+document.querySelector(".third2").addEventListener('click', function(){
+  Swal.fire("Notification of Acceptance", "04.02.2022", "success");
+});
+document.querySelector(".third3").addEventListener('click', function(){
+  Swal.fire("Full Paper Submission", "14.02.2022", "success");
+});
+document.querySelector(".third4").addEventListener('click', function(){
+  Swal.fire("Conference Dates", "09.03.2022 & 10.03.2022", "success");
+});
+  </script>
+ 
 
 </body>
 
