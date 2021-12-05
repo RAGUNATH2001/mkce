@@ -6,17 +6,17 @@
     background-color: antiquewhite;
 
 }
-th,td{
+#impt_table >th,td{
     padding:10px;
 }
 .import_table{
     margin-left: 15%;
   
 }
-td:nth-child(2){
+#impt_table >td:nth-child(2){
     width: 70%;
 }
-tr:nth-child(1),th:nth-child(3){
+#impt_table >tr:nth-child(1),th:nth-child(3){
     border-bottom: 2px solid brown;
 }
 
